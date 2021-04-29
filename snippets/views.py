@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -47,4 +46,4 @@ def snippet_detail(request, pk, format=None):
 
     elif request.method == 'DELETE':
         snippet.delete()
-        return HttpResponse(status=status.HTTP_204_NO_CONTENT)
+        return Response(status=status.HTTP_204_NO_CONTENT)
